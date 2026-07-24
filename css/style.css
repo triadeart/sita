@@ -328,6 +328,21 @@ ul{ margin: 0; padding: 0; list-style: none; }
   padding: 12px 22px; font-family: var(--font-head); font-weight: 600; font-size: 0.9rem;
 }
 
+/* Tribute photo (pais da Sita) */
+.tribute-photo{ position: relative; height: 78vh; overflow: hidden; }
+.tribute-photo img{ width: 100%; height: 100%; object-fit: cover; object-position: center 8%; display: block; }
+.tribute-scrim{
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,10,6,0) 40%, rgba(15,10,6,0.75) 100%);
+}
+.tribute-caption{
+  position: absolute; left: 0; right: 0; bottom: 40px; margin: 0; padding: 0 24px;
+  text-align: center; color: #fff; font-family: var(--font-head); font-weight: 700;
+  font-size: 1.15rem; line-height: 1.55;
+  -webkit-text-stroke: 1.6px rgba(0,0,0,0.9); paint-order: stroke fill;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.85), 0 6px 16px rgba(0,0,0,0.75), 0 14px 30px rgba(0,0,0,0.6);
+}
+
 /* Local / map */
 .local-text{ font-size: 1.05rem; max-width: 60ch; }
 .map-frame{
@@ -406,6 +421,8 @@ ul{ margin: 0; padding: 0; list-style: none; }
 
   .quote-photo{ width: 160px; height: 160px; }
   .closing-photo{ height: 400px; }
+  .tribute-photo{ height: 460px; }
+  .tribute-caption{ font-size: 0.95rem; bottom: 24px; }
 
   .section{ padding: 64px 0; }
 }
