@@ -30,6 +30,39 @@
     });
   }
 
+  // ---- Carousels (photo break + local drone shots) ----
+  document.querySelectorAll(".carousel").forEach(function (carousel) {
+    var slides = carousel.querySelectorAll(".carousel-slide");
+    var dots = carousel.querySelectorAll(".carousel-dot");
+    var prevBtn = carousel.querySelector(".carousel-arrow--prev");
+    var nextBtn = carousel.querySelector(".carousel-arrow--next");
+    var interval = parseInt(carousel.getAttribute("data-interval"), 10) || 5000;
+    var current = 0;
+    var timer = null;
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, i) { slide.classList.toggle("is-active", i === current); });
+      dots.forEach(function (dot, i) { dot.classList.toggle("is-active", i === current); });
+    }
+
+    function restartTimer() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(function () { goTo(current + 1); }, interval);
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", function () { goTo(current - 1); restartTimer(); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { goTo(current + 1); restartTimer(); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () { goTo(i); restartTimer(); });
+    });
+
+    carousel.addEventListener("mouseenter", function () { if (timer) clearInterval(timer); });
+    carousel.addEventListener("mouseleave", restartTimer);
+
+    if (slides.length > 1) restartTimer();
+  });
+
   // ---- Reveal on scroll ----
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
