@@ -150,18 +150,21 @@ ul{ margin: 0; padding: 0; list-style: none; }
 .hero h1{
   font-size: clamp(1.9rem, 4.4vw, 3rem); color: #fff; max-width: 700px;
   text-align: center; margin-left: auto; margin-right: auto;
-  -webkit-text-stroke: 1.8px rgba(0,0,0,0.88);
+  -webkit-text-stroke: 2.6px rgba(0,0,0,1);
   paint-order: stroke fill;
-  text-shadow: 0 10px 26px rgba(0,0,0,0.55);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.72);
 }
 .hero-sub{
   max-width: 52ch; font-size: 1.05rem; font-weight: 700; color: #fff;
   text-align: center; margin-left: auto; margin-right: auto;
-  -webkit-text-stroke: 0.6px rgba(0,0,0,0.7);
+  -webkit-text-stroke: 1.3px rgba(0,0,0,1);
   paint-order: stroke fill;
-  text-shadow: 0 5px 16px rgba(0,0,0,0.68);
+  text-shadow: 0 6px 18px rgba(0,0,0,0.55);
 }
-.hero-sub-highlight{ color: #EE9A45; }
+.hero-sub-highlight{
+  color: #fff; -webkit-text-stroke: 1.2px #E8873A; paint-order: stroke fill;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.65);
+}
 
 .hero-meta{ display: flex; align-items: stretch; gap: 16px; margin: 28px 0; }
 .date-badge{
