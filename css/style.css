@@ -427,10 +427,10 @@ ul{ margin: 0; padding: 0; list-style: none; }
   .site-nav a{ width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(42,31,20,0.06); }
   .nav-cta{ margin-top: 10px; text-align: center; }
 
-  .hero-content{ padding-top: 16px; padding-bottom: 28px; }
-  .hero-media img{ transform: scale(1.35); transform-origin: center 62%; }
+  .hero-content{ position: relative; padding-top: 16px; padding-bottom: 28px; }
+  .hero-media img{ transform: scale(1.35); transform-origin: center 60%; }
   .hero-actions{ flex-direction: column; align-items: stretch; gap: 10px; }
-  .hero-meta{ gap: 10px; margin: 0 0 16px; margin-top: max(90px, 12vh); }
+  .hero-meta{ gap: 10px; margin: 0 0 16px; margin-top: max(130px, 16vh); }
   .date-badge{ padding: 8px 14px; }
   .hero-meta-text{ padding: 8px 14px; }
   .hero-badge{ margin-top: 14px; padding: 7px 16px; }
