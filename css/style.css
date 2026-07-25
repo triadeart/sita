@@ -126,7 +126,7 @@ ul{ margin: 0; padding: 0; list-style: none; }
 .nav-toggle span{ width: 24px; height: 2px; background: var(--ink); border-radius: 2px; }
 
 /* ===== Hero ===== */
-.hero{ position: relative; min-height: 92vh; overflow: hidden; }
+.hero{ position: relative; min-height: 92vh; min-height: 92svh; overflow: hidden; }
 .hero-media{ position: absolute; inset: 0; }
 .hero-media img{ width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .hero-scrim{
@@ -238,7 +238,7 @@ ul{ margin: 0; padding: 0; list-style: none; }
 
 /* Closing photo (Sita & Rama, fading at the edges) */
 .closing-photo{
-  margin-top: 48px; height: 620px; overflow: hidden;
+  margin-top: 48px; max-width: 1000px; margin-left: auto; margin-right: auto; height: 620px; overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 20%, black 80%, transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0%, black 20%, black 80%, transparent 100%);
 }
@@ -272,7 +272,7 @@ ul{ margin: 0; padding: 0; list-style: none; }
 
 /* Photo break */
 .photo-break{ position: relative; }
-.photo-break .carousel{ width: 100%; height: 60vh; }
+.photo-break .carousel{ width: 100%; max-width: 1100px; margin: 0 auto; height: 60vh; }
 .photo-break-caption{
   position: absolute; left: 0; right: 0; bottom: 28px; text-align: center; z-index: 2;
 }
@@ -329,7 +329,7 @@ ul{ margin: 0; padding: 0; list-style: none; }
 }
 
 /* Tribute photo (pais da Sita) */
-.tribute-photo{ position: relative; height: 78vh; overflow: hidden; }
+.tribute-photo{ position: relative; max-width: 1050px; margin: 0 auto; height: 78vh; overflow: hidden; }
 .tribute-photo img{ width: 100%; height: 100%; object-fit: cover; object-position: center 8%; display: block; }
 .tribute-scrim{
   position: absolute; inset: 0;
@@ -395,6 +395,18 @@ ul{ margin: 0; padding: 0; list-style: none; }
 .whatsapp-float:hover{ transform: scale(1.08); }
 
 /* ===== Responsive ===== */
+@media (min-width: 761px){
+  .hero-media img{ object-position: center 38%; }
+  .hero-meta{ justify-content: center; }
+  .hero-actions{ justify-content: center; }
+
+  .photo-break .carousel{ height: max(650px, 60vh); }
+  .photo-break .carousel-slide:nth-child(1){ object-position: center 12%; } /* tambor */
+  .photo-break .carousel-slide:nth-child(2){ object-position: center 5%; }  /* araras */
+  .photo-break .carousel-slide:nth-child(3){ object-position: center 5%; }  /* raizes */
+  .photo-break .carousel-slide:nth-child(5){ object-position: center 12%; } /* terra */
+}
+
 @media (max-width: 900px){
   .card-grid{ grid-template-columns: 1fr; }
   .kit-grid{ grid-template-columns: 1fr; gap: 8px; }
