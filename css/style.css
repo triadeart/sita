@@ -270,6 +270,12 @@ ul{ margin: 0; padding: 0; list-style: none; }
 .card--full{ grid-column: 1 / -1; }
 .card--verde-claro{ background: #EAF3E6; border-color: rgba(50,96,49,0.18); }
 
+.programacao-note{
+  margin-top: 32px; text-align: center; font-size: 0.95rem; line-height: 1.5; color: var(--marrom);
+  background: rgba(204,132,36,0.14); border: 1px solid rgba(204,132,36,0.35);
+  border-radius: var(--radius-lg); padding: 18px 24px;
+}
+
 /* Photo break */
 .photo-break{ position: relative; }
 .photo-break .carousel{ width: 100%; max-width: 1100px; margin: 0 auto; height: 60vh; }
